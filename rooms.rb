@@ -1,8 +1,9 @@
 class Rooms
 
- def initialize (name)
+ def initialize (rooms, capacity, song_collection)
 
-   @name = name
-   @room = []
+   @rooms = rooms
+   @capacity = 8
+   @song_collection
 
 end
