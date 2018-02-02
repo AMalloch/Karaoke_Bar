@@ -1,4 +1,4 @@
-class guests
+class Guest
 
   def initialize (name)
 
