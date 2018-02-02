@@ -1,4 +1,4 @@
-class Bar_Test
+class Bar
 
  attr_accessor :name, :till
 
@@ -6,8 +6,11 @@ class Bar_Test
 
      @name = name
      @till = till
-     @rooms = []
 
+   end
+
+   def till_amount
+     @till.sum
    end
 
 

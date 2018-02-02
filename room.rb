@@ -28,11 +28,11 @@ class Room
   end
 
   def capacity_check(guest)
-    if @capacity < 8
-      return true
+    if current_guests_number < @capacity
       p "Come on in pal"
+    else false
+      p "Not with those shoes mate"
     end
-    p "Not with those shoes pal"
   end
 
 end
