@@ -6,5 +6,4 @@ class Guest
 
   end
 
-
 end

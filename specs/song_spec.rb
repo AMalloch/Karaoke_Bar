@@ -6,7 +6,7 @@ require_relative("../song.rb")
 require_relative("../guest.rb")
 
 class Song_Test < MiniTest::Test
-#fish
+
   def setup
 
     @song = Song.new("Wonderwall", "Oasis")

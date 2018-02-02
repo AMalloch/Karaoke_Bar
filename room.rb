@@ -27,4 +27,12 @@ class Room
     return @playlist.first.name
   end
 
+  def capacity_check(guest)
+    if @capacity < 8
+      return true
+      p "Come on in pal"
+    end
+    p "Not with those shoes pal"
+  end
+
 end

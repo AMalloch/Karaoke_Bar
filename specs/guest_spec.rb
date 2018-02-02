@@ -13,6 +13,4 @@ class Guest_Test < MiniTest::Test
 
   end
 
-
-
 end

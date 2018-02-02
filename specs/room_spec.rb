@@ -71,4 +71,10 @@ class Room_Test < MiniTest::Test
     assert_equal("Wonderwall", current_song)
   end
 
+  def test_capacity
+    @roomrock.add_guest(@guest)
+    @roomrock.capacity_check(@guest)
+    assert_equal(1, @roomrock.current_guests_number)
+  end
+
 end
