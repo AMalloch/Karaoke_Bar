@@ -15,4 +15,12 @@ class Room
    return @current_guests.count
   end
 
+  def add_guest(guest)
+    @current_guests << guest
+  end
+
+  def remove_guest(guest)
+    @current_guests.pop
+  end
+
 end
