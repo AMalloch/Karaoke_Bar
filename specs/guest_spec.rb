@@ -9,7 +9,7 @@ class Guest_Test < MiniTest::Test
 #bear
   def setup
 
-    @guests = Guest.new(name)
+    @guest = Guest.new(name)
 
   end
 

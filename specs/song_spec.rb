@@ -9,7 +9,7 @@ class Song_Test < MiniTest::Test
 #fish
   def setup
 
-    @title Song.new(song_collection)
+    @title Song.new("Wonderwall", "Oasis")
 
   end
 
