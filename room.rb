@@ -23,4 +23,8 @@ class Room
     @current_guests.pop
   end
 
+  def song_playing
+    return @playlist.first.name
+  end
+
 end

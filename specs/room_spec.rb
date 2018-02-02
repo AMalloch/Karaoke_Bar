@@ -41,28 +41,34 @@ class Room_Test < MiniTest::Test
     song_col_pop = playlist[:pop]
     song_col_funk = playlist[:funk]
 
-    @room = Room.new("Rock Room", 8, playlist)
-    @song = Song.new("Wonderwall", "Oasis")
+    @roomrock = Room.new("Rock room", 8, song_col_rock)
+    @roompop = Room.new("Pop room", 8, song_col_pop)
+    @roomfunk = Room.new("Funk room", 8, song_col_funk)
+
+
+    @song = Song.new("Lounge Music", "Bored Muscian")
     @guest = Guest.new("Ffej Tunnels")
 
   end
 
-  #if room = "Rock room" play song_collection[:rock] ?
-  #
   def test_current_guests_number
-    assert_equal(0, @room.current_guests_number)
+    assert_equal(0, @roomrock.current_guests_number)
   end
 
   def test_add_guest
-    @room.add_guest(@guest)
-    assert_equal(1, @room.current_guests_number())
+    @roomrock.add_guest(@guest)
+    assert_equal(1, @roomrock.current_guests_number())
   end
 
   def test_remove_guest
-    @room.add_guest(@guest)
-    @room.remove_guest(@guest)
-    assert_equal(0, @room.current_guests_number())
+    @roomrock.add_guest(@guest)
+    @roomrock.remove_guest(@guest)
+    assert_equal(0, @roomrock.current_guests_number())
   end
 
+  def test_song_playing__rock_room
+    current_song = @roomrock.song_playing()
+    assert_equal("Wonderwall", current_song)
+  end
 
 end

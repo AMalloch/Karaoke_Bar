@@ -9,9 +9,16 @@ class Song_Test < MiniTest::Test
 #fish
   def setup
 
-    @title Song.new("Wonderwall", "Oasis")
+    @song = Song.new("Wonderwall", "Oasis")
 
   end
 
+  def test_get_name
+    assert_equal("Wonderwall", @song.name)
+  end
+
+  def test_get_artist
+    assert_equal("Oasis", @song.artist)
+  end
 
 end
