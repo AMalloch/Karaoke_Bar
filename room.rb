@@ -5,7 +5,7 @@ class Room
  def initialize (name, capacity, playlist)
 
    @name = name
-   @capacity = 8
+   @capacity = capacity
    @playlist = playlist
    @current_guests = []
 

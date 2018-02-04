@@ -6,17 +6,8 @@ require_relative("../song.rb")
 require_relative("../guest.rb")
 
 class Room_Test < MiniTest::Test
-#river
-  def setup
 
-    # playlist = [
-    #   {rock:[{ name: "Wonderwall", artist: "Oasis"},
-    #         { name: "Purple Haze", artist: "Jimi Hendrix"}]},
-    #   {pop:[{ name: "Beat It", artist: "Michael Jackson"},
-    #        { name: "Spinning Around", artist: "Kylie Minogue"}]},
-    #   {funk:[{ name: "September", artist: "Earth Wind and Fire"},
-    #         { name: "Superstition", artist: "Stevie Wonder"}]}
-    #       ]
+  def setup
 
       wonderwall = Song.new("Wonderwall", "Oasis")
       purplehaze = Song.new("Purple Haze", "Jimi Hendrix")
@@ -37,17 +28,17 @@ class Room_Test < MiniTest::Test
               ]
       }
 
-    song_col_rock = playlist[:rock]
-    song_col_pop = playlist[:pop]
-    song_col_funk = playlist[:funk]
+    song_list_rock = playlist[:rock]
+    song_list_pop = playlist[:pop]
+    song_list_funk = playlist[:funk]
 
-    @roomrock = Room.new("Rock room", 8, song_col_rock)
-    @roompop = Room.new("Pop room", 8, song_col_pop)
-    @roomfunk = Room.new("Funk room", 8, song_col_funk)
+    @roomrock = Room.new("Rock room", 8, song_list_rock)
+    @roompop = Room.new("Pop room", 8, song_list_pop)
+    @roomfunk = Room.new("Funk room", 8, song_list_funk)
 
 
     @song = Song.new("Lounge Music", "Bored Muscian")
-    @guest = Guest.new("Ffej Tunnels")
+    @guest = Guest.new("Ffej Tunnels", 50)
 
   end
 

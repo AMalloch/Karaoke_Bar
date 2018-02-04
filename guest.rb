@@ -1,8 +1,9 @@
 class Guest
 
-  def initialize (name)
+  def initialize (name, wallet)
 
     @name = name
+    @wallet = wallet
 
   end
 
