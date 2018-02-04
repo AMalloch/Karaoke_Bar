@@ -1,4 +1,4 @@
-class Bar
+class Venue
 
  attr_accessor :name
 
@@ -30,6 +30,11 @@ class Bar
 
    def remove_guest(guest)
      @total_guests.pop
+   end
+
+   def new_guest(guest)
+     add_fee_to_till
+     add_guest
    end
 
 end
