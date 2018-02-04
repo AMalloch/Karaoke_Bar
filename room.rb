@@ -8,6 +8,7 @@ class Room
    @capacity = capacity
    @playlist = playlist
    @current_guests = []
+   @room_till = 0
 
  end
   #
@@ -39,6 +40,14 @@ class Room
     if song == song_playing
      p "Woohoo!"
    end
+  end
+
+  # def change_song_playing
+  #   song_playing.rotate
+  # end
+
+  def till_amount
+    return @room_till
   end
 
 end
