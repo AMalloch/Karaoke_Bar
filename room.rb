@@ -9,6 +9,9 @@ class Room
    @playlist = playlist
    @current_guests = []
    @room_till = 0
+   @drinks = [
+  {name: "Madeira Pince-Nez", price: 4}
+  ]
 
  end
   #
@@ -48,6 +51,22 @@ class Room
 
   def till_amount
     return @room_till
+  end
+
+  def drink_stock
+    return @drinks.length
+  end
+
+  def add_drink_stock(drink)
+    @drinks << drink
+  end
+
+  def remove_drink_stock(drink)
+    for alcohol in @drinks
+      if alcohol == drink
+        @drinks.delete(drink)
+      end
+    end
   end
 
 end

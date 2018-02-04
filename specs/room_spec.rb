@@ -4,6 +4,7 @@ require("minitest/rg")
 require_relative("../room.rb")
 require_relative("../song.rb")
 require_relative("../guest.rb")
+require_relative("../drink.rb")
 
 class Room_Test < MiniTest::Test
 
@@ -38,6 +39,7 @@ class Room_Test < MiniTest::Test
     @roomfunk = Room.new("Funk room", 8, song_list_funk)
     @song = Song.new("Lounge Music", "Bored Muscian")
     @guest = Guest.new("Ffej Tunnels", 50, "Wonderwall")
+    @drink = Drink.new("Madeira Pince-Nez", 4)
 
   end
 
@@ -80,6 +82,21 @@ class Room_Test < MiniTest::Test
 
   def test_till_amount
     assert_equal(0 , @roomrock.till_amount)
+  end
+
+  def test_drink_stock__counter
+    assert_equal(1, @roomrock.drink_stock)
+  end
+
+  def test_add_drink_stock
+    @roomrock.add_drink_stock(@drink)
+    assert_equal(2, @roomrock.drink_stock)
+  end
+
+  def test_remove_drink_stock
+    @roomrock.add_drink_stock(@drink)
+    @roomrock.remove_drink_stock(@drink)
+    assert_equal(1, @roomrock.drink_stock)
   end
 
 end

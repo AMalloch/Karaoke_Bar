@@ -1,6 +1,6 @@
 class Venue
 
- attr_accessor :name
+ attr_accessor :name, :total_capacity
 
    def initialize (name, total_capacity)
 
