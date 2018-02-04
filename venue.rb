@@ -5,7 +5,7 @@ class Venue
    def initialize (name, total_capacity)
 
      @name = name
-     @till = 0
+     @venue_till = 0
      @entry_fee = 5
      @total_guests = []
      @total_capacity = total_capacity
@@ -13,11 +13,11 @@ class Venue
    end
 
    def till_amount
-     return @till
+     return @venue_till
    end
 
    def add_fee_to_till
-     @till += @entry_fee
+     @venue_till += @entry_fee
    end
 
    def total_guests

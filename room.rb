@@ -35,4 +35,10 @@ class Room
     end
   end
 
+  def guest_song(song)
+    if song == song_playing
+     p "Woohoo!"
+   end
+  end
+
 end

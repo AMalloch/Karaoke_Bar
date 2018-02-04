@@ -8,9 +8,9 @@ require_relative("../guest.rb")
 class Guest_Test < MiniTest::Test
 #bear
   def setup
-
-    @guest = Guest.new("Ffej Tunnels", 50)
                         #Jeff Bridges
+    @guest = Guest.new("Ffej Tunnels", 50, "Wonderwall")
+
   end
 
 end

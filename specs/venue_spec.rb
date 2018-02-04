@@ -9,7 +9,7 @@ class Venue_Test < MiniTest::Test
   def setup
 
     @venue = Venue.new("Y Factor", 30)
-    @guest = Guest.new("Ffej Tunnels", 50)
+    @guest = Guest.new("Ffej Tunnels", 50, "Wonderwall")
 
   end
 
