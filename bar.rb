@@ -20,8 +20,16 @@ class Bar
      @till += @entry_fee
    end
 
-   def total_capacity
+   def total_guests
      return @total_guests.count
+   end
+
+   def add_guest(guest)
+     @total_guests << guest
+   end
+
+   def remove_guest(guest)
+     @total_guests.pop
    end
 
 end

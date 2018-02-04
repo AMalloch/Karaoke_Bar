@@ -22,8 +22,21 @@ class Bar_Test < MiniTest::Test
     assert_equal(5, @bar.till_amount)
   end
 
-  def test_total_capacity
-    assert_equal(0, @bar.total_capacity)
+  def test_total_guests
+    assert_equal(0, @bar.total_guests)
+  end
+
+  def test_add_guest
+    @bar.add_guest(@guest)
+    @bar.add_fee_to_till
+    assert_equal(1, @bar.total_guests())
+    assert_equal(5, @bar.till_amount)
+  end
+
+  def test_remove_guest
+    @bar.add_guest(@guest)
+    @bar.remove_guest(@guest)
+    assert_equal(0, @bar.total_guests())
   end
 
 
